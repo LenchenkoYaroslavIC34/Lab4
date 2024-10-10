@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Лабораторна робота №4: Адаптивна верстка</title>
+   <style>
+      /* Загальні стилі */
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f4f4f4;
+      }
+
+      header {
+         background-color: #4CAF50;
+         color: white;
+         padding: 10px;
+         text-align: center;
+      }
+
+      section {
+         padding: 20px;
+         margin: 10px;
+      }
+
+      footer {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: 10px;
+         position: fixed;
+         width: 100%;
+         bottom: 0;
+      }
+
+      /* Стилі для мобільних пристроїв (Mobile First) */
+      section {
+         background-color: #ffffff;
+      }
+
+      /* Планшетна версія  */
+      @media (min-width: 768px) {
+         section {
+            background-color: #ffdddd;
+         }
+         body {
+            font-size: 18px;
+         }
+      }
+
+      /* Десктопна версія  */
+      @media (min-width: 1024px) {
+         section {
+            background-color: #ffc9c9;
+         }
+         body {
+            font-size: 20px;
+         }
+      }
+
+      /* Логічний оператор "і" */
+      @media (min-width: 768px) and (max-width: 1024px) {
+         header {
+            background-color: #00796B;
+         }
+      }
+
+      /* Логічний оператор "або" */
+      @media screen and (max-width: 600px), screen and (min-width: 1200px) {
+         footer {
+            background-color: #FF5722;
+         }
+      }
+   </style>
+</head>
+<body>
+   <header>
+      <h1>Лабораторна робота №4</h1>
+      <h2>Адаптивна верстка. Медіа-запити. Метатег viewport. Стратегія Mobile First</h2>
+   </header>
+
+   <section>
+      <h3>Десктопна версія:</h3>
+      <p>
+         Для десктопної версії застосовано інше фонове забарвлення секції та більший розмір тексту, що полегшує читання на великих екранах.
+      </p>
+
+      <h3>Планшетна версія:</h3>
+      <p>
+         Планшетна версія відображає інші фонові кольори та трохи збільшений шрифт порівняно з мобільною версією, щоб зручніше було читати на середніх екранах.
+      </p>
+
+      <h3>Мобільна версія:</h3>
+      <p>
+         Мобільна версія є початковою, відповідно до стратегії Mobile First. У ній фокус на мінімалізмі, зручності користування та базових кольорах.
+      </p>
+   </section>
+
+   <footer>
+      <p>Лабораторна робота №4</p>
+   </footer>
+</body>
+</html>
